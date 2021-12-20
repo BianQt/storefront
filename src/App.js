@@ -1,15 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import React from "react";
+import { connect } from "react-redux";
+import { Button } from "@mui/material";
+import { newCart } from "./components/action";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Categories from "./components/Categories";
+import faker from "faker";
 
-function App() {
+const App = () => {
   return (
-    <>
-<Header/>
-<Footer/>
-</>
+    <div>
+      <Header />
+        <Categories />
+      <Footer />
+    </div>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  cart: state.cart,
+});
+
+const mapDispatchToProps = { newCart };
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
