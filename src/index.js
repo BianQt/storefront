@@ -3,16 +3,15 @@ import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 import App from "./App";
-import allReducers from "../src/components/reduceres";
-const store = createStore(allReducers);
+import allReducers from "./reduceres";
+
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 class Main extends React.Component {
   render() {
     return (
       <Provider store={store}>
-        <React.Fragment>
           <App />
-        </React.Fragment>
       </Provider>
     );
   }

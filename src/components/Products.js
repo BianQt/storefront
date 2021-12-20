@@ -7,36 +7,31 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { Grid } from "@mui/material";
 
-export default function Product({
-  category,
-  description,
-  image,
-  inventoryCount,
-  name,
-  price,
-}) {
+export default function Product(props) {
   return (
     <Grid item xs={4}>
       <Card sx={{ maxWidth: 345 }}>
         <CardMedia
           component="img"
           height="140"
-          image={image}
+          image={props.item.image}
           alt="green iguana"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            {name}
+            {props.item.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
-            {description}
+            {props.item.description}
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">Add to Cart</Button>
+          <Button onClick={()=>props.addItem(props.item)} size="small">Add to Cart</Button>
           <Button size="small">view details</Button>
         </CardActions>
       </Card>{" "}
     </Grid>
   );
 }
+
+
