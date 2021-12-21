@@ -1,6 +1,6 @@
 [
     {
-        "image": "https://pixabay.com/get/g94ca22ab7fb03eb07357812ecb4dced6cb82d82bd95408f2072b9792ec1633a23261ce21c2c9d04ded8aa6909e89f2ea_1280.jpg",
+        "image": "https://cdn.blueberriesconsulting.com/2020/03/berries.jpg",
         "category": "food",
         "name": "Berries"
     },
@@ -12,19 +12,19 @@
     },
   
     {
-        "image": "https://pixabay.com/get/g38a6fbbc1a23807539d0db32114203dc4850609a4e5e6dabb327d1b09cd5739a53711c9e1f1a11cd1b8142480a130478d01936bfee6293a5e11c4ec5000eeb65_1280.jpg",
+        "image": "https://www.olivado.com/wp-content/uploads/2020/07/104_scientific-kitchen-700.jpg",
         "category": "food",
-        "name": "vegetables"
+        "name": "Avocado"
     },
     {
-        "image": "https://pixabay.com/get/gfbb741fa123434a714b1ed6ea732efd1712bda97c01573e494a8ad74140b2522c3e9bd31d34cd7451425b1a153d1e4e8ac1d307b852553f7aefc377e5d7a20dd_1280.jpg",
+        "image": "https://images.medindia.net/amp-images/patientinfo/top-health-benefits-of-banana.jpg",
         "category": "food",
-        "name": "salad"
+        "name": "Banana"
     },
     {
-        "image": "https://pixabay.com/get/g35b5e08080ec2258c28883e0d1d0f4d4d49e1293f8f19f44327cc8df0c47f831e6fb7153a6798dc97ccdee43c6de12ea9cafa2cb9eb0b7e5ddb9fc82f4533542_1280.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOVGTzGaXwOotJrWDiylnAUSEM-LeL5tWEHnIFysehmIF9ldVySqFw5TU1vvp45nKyszk&usqp=CAU",
         "category": "food",
-        "name": "salmon"
+        "name": "Salmon"
     },
     {
         "category": "electronics",
@@ -37,9 +37,9 @@
         "image": "https://cdn.pixabay.com/photo/2017/01/25/12/31/bitcoin-2007769_150.jpg"
     },
     {
-        "image": "https://pixabay.com/get/gdb5ad5216ae2d95e6ad837c9f8043b890b2849fa5b30c45a2725a2aa2100a2f52c9ccfa99bcbb92d1d023f9f9d04c840a37ec64a2d2c98c61ac08615f3edd4d2_1280.jpg",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfkDm5X4tCaoD2MYQVR3iNdcUF7Xj-zW4NXA&usqp=CAU",
         "category": "food",
-        "name": "spaghetti"
+        "name": "Green Beans"
     },
     {
         "category": "electronics",

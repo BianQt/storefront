@@ -18,15 +18,17 @@ export default function Product(props) {
           alt="green iguana"
         />
         <CardContent>
+          
           <Typography gutterBottom variant="h5" component="div">
             {props.item.name}
           </Typography>
           <Typography variant="body2" color="text.secondary">
             {props.item.description}
           </Typography>
+
         </CardContent>
         <CardActions>
-          <Button onClick={()=>props.addItem(props.item)} size="small">Add to Cart</Button>
+          <Button onClick={()=>props.addItem({...props.item, qty:1 })} size="small">Add to Cart</Button>
           <Button size="small">view details</Button>
         </CardActions>
       </Card>{" "}
