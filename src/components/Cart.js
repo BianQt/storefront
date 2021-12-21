@@ -55,12 +55,20 @@ export default function Cart(props) {
                 secondary={
                   <React.Fragment>
                     <Typography
+                      sx={{ display: "block" }}
+                      component="span"
+                      variant="body2"
+                      color="text.primary"
+                    >
+                    qty: {item.qty} 
+                    </Typography>
+                    <Typography
                       sx={{ display: "inline" }}
                       component="span"
                       variant="body2"
                       color="text.primary"
                     >
-                      {Math.floor(Math.random()*10)}$
+                      {Math.floor(Math.random()*10)+1}$
                     </Typography>
                   </React.Fragment>
                 }
