@@ -8,7 +8,7 @@ const cartReducer = (state = initialState, action) => {
     case "ADD_ITEM":
       for (let i = 0; i < state.items.length; i++) {
         if(state.items[i].name === payload.item.name){
-          state.items[i].qty++;
+          state.items[i].qtyCart++;
           return { items:[...state.items], num: state.num+1 };
         }
       }

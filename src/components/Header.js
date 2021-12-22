@@ -65,7 +65,7 @@ const Header = (props) => {
             {props.cartItems.map((item) => {
               return (
                 <MenuItem onClick={handleClose}>
-                  <ListItemText>{item.name}  {item.qty>1 ? `(${item.qty})`: ''}</ListItemText>
+                  <ListItemText>{item.name}  {item.qtyCart>1 ? `(${item.qtyCart})`: ''}</ListItemText>
                     <button style={style}>X</button>
                 </MenuItem>
               );

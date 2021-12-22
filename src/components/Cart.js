@@ -60,7 +60,7 @@ export default function Cart(props) {
                       variant="body2"
                       color="text.primary"
                     >
-                    qty: {item.qty} 
+                    qty: {item.qtyCart} 
                     </Typography>
                     <Typography
                       sx={{ display: "inline" }}
