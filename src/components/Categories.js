@@ -60,7 +60,6 @@ function addToCart(item){
     console.log('successfully deleted');
   })
 }
-
 props.newItems();
 }
 
@@ -68,7 +67,6 @@ props.newItems();
     <div>
      
       <Container maxWidth="xl">
-      {props.show ?  <Cart items={props.cartItems} /> :
       <>
       <h1
           style={{
@@ -102,7 +100,6 @@ props.newItems();
           </Grid>
         </Container>
         </>
-}
       </Container>
       
     </div>

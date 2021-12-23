@@ -11,6 +11,8 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import ListItemText from "@mui/material/ListItemText";
 import ListItemIcon from "@mui/material/ListItemIcon";
 
+import { Link } from "react-router-dom";
+
 const style= {
   marginLeft: '3em',
   width: '1.5em',
@@ -41,7 +43,7 @@ const Header = (props) => {
             sx={{ flexGrow: 1 }}
             onClick={() => props.setShow(false)}
           >
-            OUR STORE
+          <Link to="/" style={{textDecoration:'none', color:'black' }}> OUR STORE</Link> 
           </Typography>
           {/* <Button color="inherit" onClick={()=>props.setShow(true)}>Cart({props.cart})</Button> */}
           <Button
@@ -71,7 +73,7 @@ const Header = (props) => {
               );
             })}
             <MenuItem onClick={()=>props.setShow(true)}>
-                 Cart
+            <Link to="/cart" style={{textDecoration:'none', color:'black' }}> Cart </Link>
                 </MenuItem>
           </Menu>
         </Toolbar>
