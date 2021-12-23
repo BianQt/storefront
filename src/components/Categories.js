@@ -1,15 +1,18 @@
 import { Button, ButtonGroup, Container, Grid } from "@mui/material";
-import React from "react";
+import React, {useEffect} from "react";
 import { connect } from "react-redux";
 import Products from "./Products";
 import Cart from "./Cart";
-import { addItem } from "../action";
+import { addItem, newItems } from "../action";
+const axios = require('axios');
 
 export const Categories = (props) => {
+
   const [category, setCategory] = React.useState("");
   const renderCategories = () => {
     const btn = [];
     const categories = [];
+    
     props.items.forEach((item, i) => {
       if (!categories.includes(item.category)) {
         categories.push(item.category);
@@ -40,15 +43,30 @@ export const Categories = (props) => {
   };
   const [btn] = renderCategories();
 
-function addToCart( item){
+  useEffect(()=>{
+     props.newItems();
+  },[props.cartItems]);
+
+
+function addToCart(item){
   props.addItem({item});
+  if(item.qty-1>0){
+  let reqBody = {qty:item.qty-1}
+  axios.put(`https://bianqt-storefront.herokuapp.com/item/${item.id}`,reqBody).then(res => {
+    console.log(res.data);
+  })
+}else{
+  axios.delete(`https://bianqt-storefront.herokuapp.com/item/${item.id}`).then(res => {
+    console.log('successfully deleted');
+  })
+}
+props.newItems();
 }
 
   return (
     <div>
      
       <Container maxWidth="xl">
-      {props.show ?  <Cart items={props.cartItems} /> :
       <>
       <h1
           style={{
@@ -82,7 +100,6 @@ function addToCart( item){
           </Grid>
         </Container>
         </>
-}
       </Container>
       
     </div>
@@ -99,6 +116,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => {
   return {
     addItem: (props)=>dispatch(addItem(props)),
+    newItems: ()=>dispatch(newItems()),
   };
 };
 
